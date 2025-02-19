@@ -113,6 +113,41 @@ html {
   transform: translateX(0);
 } */
 
+/***** ÚVOD - background image *****/
+.css-photo {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../img/main-photo.avif");
+  background-size: cover;
+  background-position: right center;
+  /* object-fit: cover; */
+  /* object-position: right center; */
+  /* background-attachment: fixed; */
+  height: 100vh;
+}
+
+@media (min-width: 40em) {
+  .css-photo {
+    background-size: cover;
+    background-position: top;
+    /* object-fit: cover; */
+    /* object-position: right center; */
+    /* background-attachment: fixed; */
+    height: 100vh;
+  }
+}
+.navbar-c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
 /***** ÚVOD *****/
 .navbar {
   position: absolute;
