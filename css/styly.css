@@ -563,7 +563,7 @@ html {
     url("../img/background.avif");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   padding-bottom: 5rem;
   margin-bottom: 5rem;
   color: #fff;
