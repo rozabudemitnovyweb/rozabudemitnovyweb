@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Main circular shape -->
+  <path d="M400 100 C270 100 165 205 165 335 C165 465 270 570 400 570 C530 570 635 465 635 335 C635 205 530 100 400 100 Z M400 170 C491 170 565 244 565 335 C565 426 491 500 400 500 C309 500 235 426 235 335 C235 244 309 170 400 170 Z" fill="white"/>
+  
+  <!-- Vertical line element -->
+  <rect x="385" y="210" width="30" height="250" fill="white"/>
+  
+  <!-- Horizontal line element -->
+  <rect x="275" y="320" width="250" height="30" fill="white"/>
+</svg>

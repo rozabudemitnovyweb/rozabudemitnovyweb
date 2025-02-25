@@ -47,9 +47,20 @@ html {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: max-content;
   background-color: transparent;
-  z-index: 1;
+  z-index: 999;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: max-content;
+  background-color: #000000ef;
+  box-shadow: 0 1rem 3rem #00000032;
+}
+
 .btn-mobile-nav {
   display: block;
   border: transparent;
@@ -239,49 +250,58 @@ html {
   }
 }
 
+.bold-text {
+  font-weight: bold;
+}
+article p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 /* animation */
-.hidden {
-  opacity: 0;
-  transition: all 0.6s;
-  transform: translateY(30%);
-}
+@media (min-width: 48em) {
+  .hidden {
+    opacity: 0;
+    transition: all 0.6s;
+    transform: translateY(30%);
+  }
 
-.show {
-  opacity: 1;
-  transition: 0.6s;
-  transform: translateY(0);
-}
+  .show {
+    opacity: 1;
+    transition: 0.6s;
+    transform: translateY(0);
+  }
 
-.hidden:nth-child(2) {
-  transition-delay: 100ms;
-}
+  .hidden:nth-child(2) {
+    transition-delay: 100ms;
+  }
 
-.hidden:nth-child(3) {
-  transition-delay: 200ms;
-}
+  .hidden:nth-child(3) {
+    transition-delay: 200ms;
+  }
 
-.hidden-left {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.6s;
-}
+  .hidden-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s;
+  }
 
-.show-left {
-  opacity: 1;
-  transition: 1s;
-  transform: translateX(0);
-}
+  .show-left {
+    opacity: 1;
+    transition: 1s;
+    transform: translateX(0);
+  }
 
-.hidden-right {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.6s;
-}
+  .hidden-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s;
+  }
 
-.show-right {
-  opacity: 1;
-  transition: 1s;
-  transform: translateX(0);
+  .show-right {
+    opacity: 1;
+    transition: 1s;
+    transform: translateX(0);
+  }
 }
 
 /***** ÚVOD *****/
@@ -449,7 +469,6 @@ html {
 }
 .type-of-help img {
   max-width: 100%;
-  height: auto;
 }
 .help-box {
   display: flex;
@@ -462,26 +481,30 @@ html {
   padding: 1rem;
   text-decoration: none;
   color: #000;
+  transition: 0.3s ease;
 }
 
 @media (min-width: 48em) {
   .help-box.one:hover {
-    color: #5cb338;
-    background-color: #5db33811;
-    border: 0.25rem #5cb338 solid;
-    transition: 0.25s;
+    color: #376231;
+    border: 0.25rem #376231 solid;
+    /* transition: 0.25s; */
+    transform: translateY(-1rem);
+    box-shadow: 0 1.3rem 2rem #37623120;
   }
   .help-box.two:hover {
-    color: #fb4141;
-    background-color: #fb414111;
-    border: 0.25rem #fb4141 solid;
-    transition: 0.25s;
+    color: #ae0000;
+    border: 0.25rem #ae0000 solid;
+    /* transition: 0.25s; */
+    transform: translateY(-1rem);
+    box-shadow: 0 1.3rem 2rem #ae00001a;
   }
   .help-box.last:hover {
-    color: #ffc145;
-    background-color: #ffc14511;
-    border: 0.25rem #ffc145 solid;
-    transition: 0.25s;
+    color: #6e4c08;
+    border: 0.25rem #6e4c08 solid;
+    /* transition: 0.25s; */
+    transform: translateY(-1rem);
+    box-shadow: 0 1.3rem 2rem #6e4c081f;
   }
 }
 
@@ -506,7 +529,7 @@ html {
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 5rem 0;
 }
 @media (min-width: 55em) {
@@ -560,10 +583,9 @@ html {
       rgba(0, 0, 0, 0.756),
       rgba(0, 0, 0, 0.756)
     ),
-    url("../img/background.avif");
+    url("../img/why-me.png");
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
   padding-bottom: 5rem;
   margin-bottom: 5rem;
   color: #fff;
@@ -571,6 +593,7 @@ html {
 @media (min-width: 48em) {
   .why-me {
     padding-bottom: 8rem;
+    background-attachment: fixed;
   }
 }
 .why-me h2 {
@@ -652,9 +675,9 @@ html {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../img/bezpecnost-prace.avif");
+    url("../img/bezpecnost-prace.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   height: 100vh;
 }
 .main-text.bozp {
@@ -671,6 +694,12 @@ html {
     margin-top: 1rem;
     font-size: 1.2rem;
   }
+}
+
+.main-text.bozp .introduction {
+  background: linear-gradient(to right, #387630, #9cff9c);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bozp h2 {
@@ -693,6 +722,44 @@ html {
     line-height: 1;
   }
 }
+.help-bozp {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.756),
+      rgba(0, 0, 0, 0.756)
+    ),
+    url("../img/kontrola-inspekce.png");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+@media (min-width: 48em) {
+  .help-bozp {
+    padding-bottom: 8rem;
+    background-attachment: fixed;
+  }
+}
+.help-bozp h2 {
+  color: #fff;
+  line-height: 1.2;
+}
+.help-bozp .text {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+@media (min-width: 48em) {
+  .help-bozp .text {
+    margin: 0 5rem;
+  }
+}
+@media (min-width: 64em) {
+  .help-bozp .text {
+    font-size: 1.2rem;
+  }
+}
 
 /***** POŽÁRNÍ-OCHRANA *****/
 .main-photo.po {
@@ -701,25 +768,42 @@ html {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../img/pozarni-ochrana.avif");
+    url("../img/pozarni-ochrana.png");
   background-size: cover;
   background-position: center;
-  /* object-fit: cover; */
-  /* object-position: right center; */
-  /* background-attachment: fixed; */
   height: 100vh;
+}
+.main-text.po .introduction {
+  background: linear-gradient(to right, #b20b0b, #f67777);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about.po img {
+  max-width: 100%;
+  box-shadow: 0 1.3rem 2rem #00000038;
+  align-self: center;
+}
+@media (min-width: 37em) {
+  .about.po img {
+    width: 60%;
+  }
+}
+@media (min-width: 55em) {
+  .about.po img {
+    width: 30%;
+  }
 }
 
 .help-fire {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.756),
-      rgba(0, 0, 0, 0.756)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
-    url("../img/pozarni-ochrana.avif");
+    url("../img/kontrola-hzs.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding-bottom: 5rem;
   margin-bottom: 5rem;
   color: #fff;
@@ -727,10 +811,12 @@ html {
 @media (min-width: 48em) {
   .help-fire {
     padding-bottom: 8rem;
+    background-attachment: fixed;
   }
 }
 .help-fire h2 {
   color: #fff;
+  line-height: 1.2;
 }
 .help-fire .text {
   font-size: 1rem;
@@ -755,13 +841,18 @@ html {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../img/skoleni-main.avif");
+    url("../img/skoleni3.png");
   background-size: cover;
   background-position: center;
   /* object-fit: cover; */
   /* object-position: right center; */
   /* background-attachment: fixed; */
   height: 100vh;
+}
+.main-text.skoleni .introduction {
+  background: linear-gradient(to right, #bd861a, #fac966);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .type-of-training {
   display: grid;
@@ -801,8 +892,9 @@ html {
   border-radius: 2rem;
   line-height: 1.2;
   width: 17.5rem;
+  border: 0.25rem #000 solid;
 }
-.type-of-training .bozp,
+/* .type-of-training .bozp,
 .type-of-training .administration {
   border: 0.25rem #5cb338 solid;
   color: #5cb338;
@@ -816,7 +908,7 @@ html {
 .type-of-training .production {
   border: 0.25rem #ffc145 solid;
   color: #ffc145;
-}
+} */
 
 /***** KONTAKT *****/
 .main-photo.contact {
@@ -845,7 +937,12 @@ html {
 }
 
 .main-text.contact {
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+@media (min-width: 48em) {
+  .main-text.contact {
+    width: 100%;
+  }
 }
 .contact-page .text {
   font-size: 1rem;
