@@ -18,39 +18,73 @@
 </head>
 <body>
     <header class="wrapper">
-        <div class="main-photo contact">
-            <nav id="nav-bar" class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="img/logo-black.svg" fetchpriority="high" loading="eager" width="150" height="150" alt="Rosenbach logo, na hlavní stránku">
-                </a>
-                <ul class="nav">
-                    <li><a href="index.html">Úvod</a></li>
-                    <li><a href="bezpecnost-prace.html">Bezpečnost práce</a></li>
-                    <li><a href="pozarni-ochrana.html">Požární ochrana</a></li>
-                    <li><a href="skoleni.html">Školení</a></li>
-                    <li><a href="kontakt.html" class="active reverse">Kontakt</a></li>
-                </ul>
-                <button class="btn-mobile-nav" title="Menu">
-                    <img src="img/menu-white.svg" class="icon-mobile-nav" name="menu" aria-hidden="true" fetchpriority="high" loading="eager" width="30" height="30" alt="ikona menu, otevřít"></img>
-                    <img fetchpriority="low" loading="lazy" src="img/close.svg" class="icon-mobile-nav" name="close" aria-hidden="true" width="30" height="30" alt="ikona menu, zavřít"></img>
-                </button>
-            </nav>
-                <div class="main-text contact">
-                    <h1 class="introduction">"Better safe than sorry"</h1>
+            <div class="row">
+                <nav id="nav-bar" class="navbar">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo-black.svg" fetchpriority="high" loading="eager" width="150" height="150" alt="Rosenbach logo, na hlavní stránku">
+                    </a>
+                    <ul class="nav">
+                        <li><a href="index.html" class="reverse">Úvod</a></li>
+                        <li><a href="bezpecnost-prace.html" class="reverse">Bezpečnost práce</a></li>
+                        <li><a href="pozarni-ochrana.html" class="reverse">Požární ochrana</a></li>
+                        <li><a href="skoleni.html" class="reverse">Školení</a></li>
+                        <li><a href="kontakt.html" class="active reverse coat">Kontakt</a></li>
+                    </ul>
+                    <button class="btn-mobile-nav" title="Menu">
+                        <img src="img/menu-black.svg" class="icon-mobile-nav" name="menu" aria-hidden="true" fetchpriority="high" loading="eager" width="30" height="30" alt="ikona menu, otevřít"></img>
+                        <img fetchpriority="low" loading="lazy" src="img/close.svg" class="icon-mobile-nav" name="close" aria-hidden="true" width="30" height="30" alt="ikona menu, zavřít"></img>
+                    </button>
+                </nav>
+                <div class="contact">
+                    <h1 class="introduction">Kontakt</h1>
                 </div>
-        </div>
+            </div>
     </header>
 
-    <main>
+    <main class="wrapper">
         <!-- ABOUT-TRAINING -->
-        <section class="contact-page">
-            <div class="row">
+        <section class="contact-page row">
+            <!-- <div class="row"> -->
                 <div class="text hidden">
-                    <p>Potřebujete zaškolit zaměstnance, zpracovat dokumentaci, zkontrolovat pracoviště, uspořádat vzdělávací seminář, připravit se na kontrolu?<br>Neváhejte se na mě obrátit.</p>
+                    <p>Potřebujete zaškolit zaměstnance, zpracovat dokumentaci, zkontrolovat pracoviště, uspořádat vzdělávací seminář, připravit se na kontrolu?</p>
+                    <p>Neváhejte se na mě obrátit.</p>
+                </div>
+            <!-- </div> -->
+        </section>
+        <section class="contact-form-background">
+            <div class="contact-form row">
+                <form action="https://submit-form.com/OK6l55eZS" class="contact-form-area">
+                    <div class="form-group">
+                        <label for="name">Jméno a Příjmení</label>
+                        <input type="text" id="name" name="name" placeholder="Jméno a Příjmení" required=""/></div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="tel" name="tel" placeholder="Telefon" required=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Zpráva</label>
+                        <textarea id="message" name="message" placeholder="Zpráva" required="" cols="60" rows="10"></textarea>
+                    </div>
+                    <label>
+                        <input type="checkbox" required>
+                        Souhlasím se 
+                        <a href="xxx" target="_blank">zpracováním osobních údajů</a>.
+                    </label>
+                    <button type="submit">Odeslat zprávu</button>
+                </form>
+                <div class="profile">
+                    <img src="img/rosenbach2.jpg" width="150" height="150" alt="">
+                    <p>Ing. Pavel Rosenbach</p>
+                    <a href="callto:+420775919411">+420 775 919 411</a>
+                    <a href="mailto:pavel@bozp-rosenbach.cz">pavel@bozp-rosenbach.cz</a>
+                    <p class="quote">"Better&nbsp;safe&nbsp;than&nbsp;sorry"</p>
                 </div>
             </div>
         </section>
-        
     </main>
     <footer>
         <div class="row">
